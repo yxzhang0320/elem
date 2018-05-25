@@ -12,7 +12,6 @@
       @keydown.down.native.prevent="highlight(highlightedIndex + 1)"
       @keydown.enter.native="handleKeyEnter"
       @keydown.native.tab="close"
-      :maxlength="maxlength"
     >
       <template slot="prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
@@ -60,7 +59,6 @@
           };
         }
       },
-      maxlength: Number,
       popperClass: String,
       placeholder: String,
       disabled: Boolean,
