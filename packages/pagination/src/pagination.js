@@ -71,10 +71,8 @@ export default {
       }
 
       if (!haveRightWrapper) {
-        console.log(template.children, 'vv')
         template.children.push(TEMPLATE_MAP[compo]);
       } else {
-        console.log('bb')
         rightWrapper.children.push(TEMPLATE_MAP[compo]);
       }
     });
