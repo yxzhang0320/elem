@@ -171,6 +171,11 @@
           callback(this.validateMessage);
         });
       },
+      clearValidate() {
+        this.validateState = '';
+        this.validateMessage = '';
+        this.validateDisabled = false;
+      },
       resetField() {
         this.validateState = '';
         this.validateMessage = '';
