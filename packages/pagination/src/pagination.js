@@ -44,6 +44,7 @@ export default {
 
   render(h) {
     let template = <div class='el-pagination'></div>;
+    template.children = [];
     const layout = this.layout || '';
     if (!layout) return;
     const TEMPLATE_MAP = {
@@ -70,8 +71,10 @@ export default {
       }
 
       if (!haveRightWrapper) {
+        console.log(template.children, 'vv')
         template.children.push(TEMPLATE_MAP[compo]);
       } else {
+        console.log('bb')
         rightWrapper.children.push(TEMPLATE_MAP[compo]);
       }
     });

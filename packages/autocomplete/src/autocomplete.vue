@@ -3,6 +3,7 @@
     <el-input
       ref="input"
       v-bind="$props"
+      :maxlength="maxlength"
       @compositionstart.native="handleComposition"
       @compositionupdate.native="handleComposition"
       @compositionend.native="handleComposition"
@@ -59,6 +60,7 @@
           };
         }
       },
+      maxlength: Number,
       popperClass: String,
       placeholder: String,
       disabled: Boolean,
